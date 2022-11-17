@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main {
+  width: 500px;
+  height: 500px;
+  border: 3px solid cadetblue;
+  display: flex;
+  flex-wrap: wrap;
+}
+main div {
+  /* width: calc(500px / 3);
+  height: calc(500px / 3); */
+  box-sizing: border-box;
+  border: 3px cadetblue solid;
+}
