@@ -10,7 +10,7 @@ const upReader = () => {
     xitem.forEach((yitem, iy) => {
       const bodyChild = document.createElement("div");
       bodyChild.style.width = `${bodyMain.clientWidth / flipObj.length}px`;
-      bodyChild.style.height = `${bodyMain.clientWidth / flipObj.length}px`;
+      bodyChild.style.height = `${bodyMain.clientHeight / flipObj.length}px`;
       bodyChild.dataset.x = ix;
       bodyChild.dataset.y = iy;
       bodyMain.appendChild(bodyChild);
@@ -42,6 +42,7 @@ bodyMain.addEventListener("click", (e) => {
   // console.log(flipObj);
   reader();
 });
+let stup = 0;
 const reader = () => {
   let iNum = 0;
   flipObj.forEach((xitem) =>
@@ -54,4 +55,17 @@ const reader = () => {
       iNum++;
     })
   );
+
+
+  let yesArr = [];
+  flipObj.forEach((i) => yesArr.push(...i));
+  // console.log(yesArr.every((i) => i === 1));
+  if (yesArr.every((i) => i === 1)) {
+    stup = 0;
+    console.log("成功");
+    // 这里写游戏成功的代码
+  } else {
+    stup++;
+    console.log(stup+"步");
+  }
 };

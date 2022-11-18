@@ -3,10 +3,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-size: 16px;
 }
 main {
-  width: 500px;
-  height: 500px;
+  width: 15em;
+  height: 15em;
   border: 1.5px solid cadetblue;
   display: flex;
   flex-wrap: wrap;
