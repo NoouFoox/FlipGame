@@ -1,4 +1,5 @@
 const bodyMain = document.querySelector("main");
+console.log("测试");
 const flipObj = [
   [0, 0, 0, 0],
   [0, 0, 0, 0],
